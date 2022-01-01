@@ -1,5 +1,7 @@
-plugin: community.general.proxmox
-url: http://10.27.27.2:8006
-user: root@pve
-password: "{{ password }}"
-validate_certs: no
+---
+- hosts: all
+  tasks:
+          - name: hostname
+            debug:
+                    var=ansible_hostname
+
